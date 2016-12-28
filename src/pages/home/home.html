@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MFPF Web SDK demo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Welcome to small MobileFirst Foundation Web SDK demo using Ionic 2
+  <div padding-top>
+    <button ion-button block color="light" (click)="MfpInit()">Init MFP Web SDK</button>
+    <button ion-button block color="light" (click)="AuthInit()">Create authentication handlers</button>
+    <button ion-button block color="light" (click)="CallUnprotected()">Call unprotected adapter</button>
+    <button ion-button block color="light" (click)="CallProtected()">Call protected adapter</button>
+    <button ion-button block color="light" (click)="LogOut()">Logout</button>
+
+  </div>
+
+<div class="logger">
+      <div class="centered" *ngIf="loggerData.length == 0"> Init MFP Web SDK to get started</div>
+      <ion-list no-lines>
+        <ion-item *ngFor="let item of loggerData" [ngStyle]="{'color': item.color}" style="font-size:1.2rem!important">
+          {{ item.text }}
+        </ion-item>
+      </ion-list>
+</div>
+
+</ion-content>

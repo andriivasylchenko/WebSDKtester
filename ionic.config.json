@@ -1,0 +1,12 @@
+{
+  "name": "websample",
+  "app_id": "",
+  "v2": true,
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/mfp",
+      "proxyUrl": "replace this with proper url:port + /mfp"
+    }
+  ]
+}
